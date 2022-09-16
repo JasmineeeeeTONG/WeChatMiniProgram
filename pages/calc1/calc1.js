@@ -19,14 +19,14 @@ Page({
       wx.showToast({ 
         title: '体重不能为空', 
         icon: 'error', 
-        duration: 1000 
+        duration: 2000 
       })
     }
     else if (height == "") {
       wx.showToast({ 
         title: '身高不能为空',
         icon: 'error', 
-        duration: 1000 
+        duration: 2000 
       })
     }
     else {
