@@ -1,0 +1,41 @@
+<!--calc1.wxml-->
+<!--
+<view class="container log-list">
+  <block wx:for="{{log}}" wx:key="timeStamp" wx:for-item="log">
+    <text class="log-item">{{index + 1}}. {{log.date}}</text>
+  </block>
+</view>
+-->
+
+<form bindsubmit="calc1" bindreset="calc1Reset">
+  <view class="label-list">
+    <view class="label">性别</view>
+    <radio-group name="gender" class="label-right">
+      <label wx:for-items="{{gender_list}}" wx:key="name">
+        <radio 
+          class="label"
+          value="{{item.name}}" 
+          checked="{{item.checked}}"/>
+          {{item.display}}
+      </label>
+    </radio-group>
+  </view>
+  <view class="label-list">
+    <view class="label">体重 (kg)</view>
+    <view class="label label-right"><input name="weight"></input></view>
+  </view>
+  <view class="label-list">
+    <view class="label">身高 (cm)</view>
+    <view class="label label-right"><input name="height"></input></view>
+  </view>
+
+  <view class="btns">
+    <button formType="submit" type="primary">计算</button>
+    <button formType="reset">清空</button>
+  </view>
+</form>
+
+<view class="result label-list">
+  <text class="label">结果</text>
+  <text class="value label label-right">{{calcArea}}</text>
+</view>

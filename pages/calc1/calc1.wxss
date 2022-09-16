@@ -1,0 +1,31 @@
+.label-list {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+.label-list .label {
+  color: #333;
+  font-size: 36rpx;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.label-list .label-right {
+  margin-left: auto;
+}
+.btns {
+  display: flex;
+  margin-top: 10px;
+}
+.btns button {
+  border: 1px solid #e8e8e8;
+  font-size: 12px;
+}
+input {
+  margin-left: auto;
+  border-bottom: 1px black solid;
+  width: 100%;
+}
+.result {
+  margin-top: 10px;
+}
