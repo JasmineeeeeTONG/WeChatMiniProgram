@@ -1,6 +1,0 @@
-<!--vte.wxml-->
-<view class="containert">
-  <block>
-    <text>VTE page</text>
-  </block>
-</view>

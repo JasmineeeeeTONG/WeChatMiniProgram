@@ -12,17 +12,40 @@ Page({
     ]
   },
   calc2(e) {
+    // 卡波剂量 = 5 * (1.03 * 体重 * (140-年龄) / sCr + 25)
     let gender = e.detail.value.gender,
       weight = e.detail.value.weight,
       age = e.detail.value.age,
       scr = e.detail.value.scr,
       auc = e.detail.value.auc;
-    // 修改计算逻辑
-      let result = "gender: " + gender + "weight: " + weight
-        + "age: " + age + "sCr:" + scr + "AUC: " + auc;
-    this.setData({
-      result: result
-    })
+    // 检查输入不为空 or 其他逻辑
+    if (weight == "") {
+      wx.showToast({ 
+        title: '体重不能为空', 
+        icon: 'error', 
+        duration: 2000 
+      })
+    }
+    else if (age == "") {
+      wx.showToast({ 
+        title: '年龄不能为空',
+        icon: 'error', 
+        duration: 2000 
+      })
+    }
+    else if (scr == "") {
+      wx.showToast({ 
+        title: 'sCr不能为空',
+        icon: 'error', 
+        duration: 2000 
+      })
+    }
+    else {
+      let result = 5 * (1.03 * weight * (140-age) / scr + 25);
+      this.setData({
+        result: result.toFixed(3)
+      })
+    }
   },
   calc2Reset(e) {
     this.setData({

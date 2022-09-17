@@ -2,8 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/calc1/calc1",
-    "pages/calc2/calc2",
-    "pages/vte/vte"
+    "pages/calc2/calc2"
   ],
   "window":{
     "backgroundTextStyle":"light",

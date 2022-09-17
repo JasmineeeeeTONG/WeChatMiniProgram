@@ -18,7 +18,6 @@
     </block>
   </view>
   <view class="buttons">
-    <button class="function-btn" bindtap="bindVTETap">Caprini VTE Score</button>
     <button class="function-btn" bindtap="bindCalc1Tap">紫杉醇剂量计算</button>
     <button class="function-btn" bindtap="bindCalc2Tap">卡铂剂量计算</button>
   </view>

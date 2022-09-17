@@ -1,4 +1,4 @@
-// calculator.js
+// calc1.js
 //const util = require('../../utils/util.js')
 
 Page({
@@ -32,7 +32,7 @@ Page({
     else {
       let area = 0.00586 * height + 0.0126 * weight - 0.0461;
       this.setData({
-        calcArea: area
+        calcArea: area.toFixed(3)
       })
     }
   },

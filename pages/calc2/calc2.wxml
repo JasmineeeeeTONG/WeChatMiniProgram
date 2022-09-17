@@ -5,7 +5,12 @@
     <view class="label">性别</view>
     <radio-group name="gender" class="label-right">
       <label wx:for-items="{{gender_list}}" wx:key="name">
-        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.display}}
+        <radio 
+          class="label"
+          disabled="1"
+          value="{{item.name}}" 
+          checked="{{item.checked}}"/>
+          {{item.display}}
       </label>
     </radio-group>
   </view>
@@ -32,6 +37,6 @@
 </form>
 
 <view class="result label-list">
-  <text class="label">结果</text>
+  <text class="label">卡铂剂量 (mg)</text>
   <text class="value label label-right">{{result}}</text>
 </view>
