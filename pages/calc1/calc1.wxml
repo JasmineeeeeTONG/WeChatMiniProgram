@@ -71,12 +71,10 @@
           <view wx:else>{{filter.numberToFixed(calcArea * 135, 2)}}</view>
         </view>
         <view class="td">
-          <view wx:if="{{calcArea == ''}}">-</view>
-          <view wx:else>{{filter.numberToFixed(calcArea * 135 * 0.75, 2)}}</view>
+          <view>-</view>
         </view>
         <view class="td">
-          <view wx:if="{{calcArea == ''}}">-</view>
-          <view wx:else>{{filter.numberToFixed(calcArea * 135 * 0.7, 2)}}</view>
+          <view>-</view>
         </view>
     </view>
     <view class="tr">
@@ -86,12 +84,10 @@
           <view wx:else>{{filter.numberToFixed(calcArea * 75, 2)}}</view>
         </view>
         <view class="td">
-          <view wx:if="{{calcArea == ''}}">-</view>
-          <view wx:else>{{filter.numberToFixed(calcArea * 75 * 0.75, 2)}}</view>
+          <view>-</view>
         </view>
         <view class="td">
-          <view wx:if="{{calcArea == ''}}">-</view>
-          <view wx:else>{{filter.numberToFixed(calcArea * 75 * 0.7, 2)}}</view>
+          <view>-</view>
         </view>
     </view>
 </view>
