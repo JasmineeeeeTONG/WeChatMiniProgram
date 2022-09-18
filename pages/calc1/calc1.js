@@ -32,7 +32,7 @@ Page({
     else {
       let area = 0.00586 * height + 0.0126 * weight - 0.0461;
       this.setData({
-        calcArea: area.toFixed(3)
+        calcArea: area.toFixed(4)
       })
     }
   },

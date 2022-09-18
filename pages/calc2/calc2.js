@@ -43,7 +43,7 @@ Page({
     else {
       let result = 5 * (1.03 * weight * (140-age) / scr + 25);
       this.setData({
-        result: result.toFixed(3)
+        result: result.toFixed(4)
       })
     }
   },

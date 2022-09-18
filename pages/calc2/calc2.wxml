@@ -1,5 +1,7 @@
 <!--calc2.wxml-->
 
+<wxs module="filter" src="../../utils/numberToFixed.wxs"></wxs>
+
 <form bindsubmit="calc2" bindreset="calc2Reset">
   <view class="label-list">
     <view class="label">性别</view>
@@ -39,4 +41,26 @@
 <view class="result label-list">
   <text class="label">卡铂剂量 (mg)</text>
   <text class="value label label-right">{{result}}</text>
+</view>
+
+<view class="table">
+    <view class="tr">
+        <view class="th">原剂量(mg)</view>
+        <view class="th">减量25%(mg)</view>
+        <view class="th">减量30%(mg)</view>
+    </view>
+    <view class="tr">
+        <view class="td">
+          <view wx:if="{{result == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(result * 1, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{result == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(result * 0.75, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{result == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(result * 0.7, 2)}}</view>
+        </view>
+    </view>
 </view>

@@ -6,6 +6,7 @@
   </block>
 </view>
 -->
+<wxs module="filter" src="../../utils/numberToFixed.wxs"></wxs>
 
 <form bindsubmit="calc1" bindreset="calc1Reset">
   <view class="label-list">
@@ -39,4 +40,58 @@
 <view class="result label-list">
   <text class="label">体表面积 (m</text><sup>2</sup><text class="label">)</text>
   <text class="value label label-right">{{calcArea}}</text>
+</view>
+
+<view class="table">
+    <view class="tr">
+        <view class="th">系数(mg/m<sup>2</sup>)</view>
+        <view class="th">原剂量(mg)</view>
+        <view class="th">减量25%(mg)</view>
+        <view class="th">减量30%(mg)</view>
+    </view>
+    <view class="tr">
+        <view class="td">175</view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 175, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 175 * 0.75, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 175 * 0.7, 2)}}</view>
+        </view>
+    </view>
+    <view class="tr">
+        <view class="td">135</view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 135, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 135 * 0.75, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 135 * 0.7, 2)}}</view>
+        </view>
+    </view>
+    <view class="tr">
+        <view class="td">75</view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 75, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 75 * 0.75, 2)}}</view>
+        </view>
+        <view class="td">
+          <view wx:if="{{calcArea == ''}}">-</view>
+          <view wx:else>{{filter.numberToFixed(calcArea * 75 * 0.7, 2)}}</view>
+        </view>
+    </view>
 </view>
